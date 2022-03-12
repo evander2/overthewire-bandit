@@ -11,24 +11,24 @@
 ```
 ls -al
 cat readme
-boJ9jbbUNNfktd78OOpsqOltutMc3MY1
 ```
+`boJ9jbbUNNfktd78OOpsqOltutMc3MY1`
 
 ## Level 1 → Level 2
 
 ```
 ls -al
 cat ./-
-CV1DtqXWVFXTvM2F0k09SHz0YwRINYA9
 ```
+`CV1DtqXWVFXTvM2F0k09SHz0YwRINYA9`
 
 ## Level 2→ Level 3
 
 ```
 ls -al
 cat spaces\ in\ this\ filename
-UmHadQclWmgdLOKQ3YNgjWxGoRMb5luK
 ```
+`UmHadQclWmgdLOKQ3YNgjWxGoRMb5luK`
 
 ## Level 3→ Level 4
 
@@ -36,8 +36,8 @@ UmHadQclWmgdLOKQ3YNgjWxGoRMb5luK
 cd inhere
 ls -al
 cat .hidden
-pIwrPrtPN36QITSp3EQaw936yaFoFgAB
 ```
+`pIwrPrtPN36QITSp3EQaw936yaFoFgAB`
 
 ## Level 4→ Level 5
 
