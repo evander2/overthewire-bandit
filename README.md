@@ -443,6 +443,28 @@ cat list.txt | nc localhost 30002
 
 ## Level 25→ Level 26
 
+```
+ssh -i ./bandit26.sshkey bandit26@localhost
+```
+
+/bin/bash X
+
+```
+cat /etc/passwd | grep bandit26
+cat /usr/bin/showtext
+```
+command: more
+shell minimize
+
+```
+v
+:e /etc/bandit_pass/bandit26
+```
+
+`5uNG9O58gUE7snukf3bvZ0rxhtnjzSGzG`
+
+
+
 
 ## Level 26→ Level 27
 
