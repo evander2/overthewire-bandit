@@ -258,8 +258,22 @@ vBgsyi/sN3RqRBcGU40fOoZyfAMT8s1m/uYv52O6IgeuZ/ujbjY=
 -----END RSA PRIVATE KEY-----
 ```
 
+```
+mkdir /tmp/evan2
+cd /tmp/evan2
+touch sshkey.private
+```
+RSA Private key
 
+```
+chmod 600 sshkey.private
+ssh -i ./sshkey.private bandit17@localhost
+```
+```
+cat /etc/bandit_pass/bandit17
+```
 
+`xLYVMN9WE5zQ5vHacb0sZEVqbrp7nBTn`
 
 
 ## Level 17→ Level 18
