@@ -217,17 +217,21 @@ nmap -p 31000-32000 localhost
 ```
 Not shown: 996 closed ports
 PORT      STATE SERVICE
+
 31046/tcp open  unknown
+
 31518/tcp open  unknown
+
 31691/tcp open  unknown
+
 31790/tcp open  unknown
+
 31960/tcp open  unknown
 
 ```
 openssl s_client -connect localhost:31790
 cluFn7wTiGryunymYOu4RcffSxQluehd
-```
-`-----BEGIN RSA PRIVATE KEY-----
+-----BEGIN RSA PRIVATE KEY-----
 MIIEogIBAAKCAQEAvmOkuifmMg6HL2YPIOjon6iWfbp7c3jx34YkYWqUH57SUdyJ
 imZzeyGC0gtZPGujUSxiJSWI/oTqexh+cAMTSMlOJf7+BrJObArnxd9Y7YT2bRPQ
 Ja6Lzb558YW3FZl87ORiO+rW4LCDCNd2lUvLE/GL2GWyuKN0K5iCd5TbtJzEkQTu
