@@ -278,18 +278,56 @@ cat /etc/bandit_pass/bandit17
 
 ## Level 17→ Level 18
 
+```
+diff passwords.new passwords.old
+```
+
+`kfBf3eYk5BPBRzwjqutbbfE887SVc5Yd`
+
+
 ## Level 18→ Level 19
+
+```
+ssh -p 2220 bandit18@bandit.labs.overthewire.org cat readme
+```
+`IueksS7Ubh8G3DCwVzrTd8rAVOwq3M5x`
+
 
 ## Level 19→ Level 20
 
+set-uid program
+
+```
+./bandit20-do cat /etc/bandit_pass/bandit20
+```
+`GbKksEFF4yrVs6il55v6gwY5aVje5f0j`
+
+
 ## Level 20→ Level 21
 
+open a port 7777
+
+```
+echo "GbKksEFF4yrVs6il55v6gwY5aVje5f0j" | nc -l -p 7777 localhost &
+./suconnect 7777
+```
+`gE269g2h3mw3pwgrj0Ha9Uoqen1c9DGr`
+
+
+
 ## Level 21→ Level 22
+
+```
+
+```
+
 
 
 ## Level 22→ Level 23
 
+
 ## Level 23→ Level 24
+
 
 ## Level 24→ Level 25
 
