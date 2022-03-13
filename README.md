@@ -215,22 +215,20 @@ BfMYroe26WYalil77FoDi9qh59eK5xNr
 ```
 nmap -p 31000-32000 localhost
 ```
-Not shown: 996 closed ports
-PORT      STATE SERVICE
-
-31046/tcp open  unknown
-
-31518/tcp open  unknown
-
-31691/tcp open  unknown
-
-31790/tcp open  unknown
-
-31960/tcp open  unknown
+Not shown: 996 closed ports  
+PORT      STATE SERVICE  
+31046/tcp open  unknown  
+31518/tcp open  unknown  
+31691/tcp open  unknown  
+31790/tcp open  unknown  
+31960/tcp open  unknown  
 
 ```
 openssl s_client -connect localhost:31790
 cluFn7wTiGryunymYOu4RcffSxQluehd
+```
+
+```
 -----BEGIN RSA PRIVATE KEY-----
 MIIEogIBAAKCAQEAvmOkuifmMg6HL2YPIOjon6iWfbp7c3jx34YkYWqUH57SUdyJ
 imZzeyGC0gtZPGujUSxiJSWI/oTqexh+cAMTSMlOJf7+BrJObArnxd9Y7YT2bRPQ
@@ -258,7 +256,7 @@ YOdjHdSOoKvDQNWu6ucyLRAWFuISeXw9a/9p7ftpxm0TSgyvmfLF2MIAEwyzRqaM
 dxviW8+TFVEBl1O4f7HVm6EpTscdDxU+bCXWkfjuRb7Dy9GOtt9JPsX8MBTakzh3
 vBgsyi/sN3RqRBcGU40fOoZyfAMT8s1m/uYv52O6IgeuZ/ujbjY=
 -----END RSA PRIVATE KEY-----
-`
+```
 
 
 
