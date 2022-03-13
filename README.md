@@ -460,7 +460,9 @@ shell minimize
 v
 :e /etc/bandit_pass/bandit26
 ```
-`5uNG9O58gUE7snukf3bvZ0rxhtnjzSGzG`
+`5czgV9L3Xx8JPOyRbXh6lQbmIOWvPT6Z`
+
+Set shell to /bin/bash
 
 ```
 :set shell=/bin/bash
@@ -470,8 +472,10 @@ v
 ## Level 26→ Level 27
 
 ```
-
+:shell
+./bandit27-do cat /etc/bandit_pass/bandit27
 ```
+`3ba3118a22e93127a4ed485be72ef5ea`
 
 
 
