@@ -453,20 +453,28 @@ ssh -i ./bandit26.sshkey bandit26@localhost
 cat /etc/passwd | grep bandit26
 cat /usr/bin/showtext
 ```
-command: more
+command: more  
 shell minimize
 
 ```
 v
 :e /etc/bandit_pass/bandit26
 ```
-
 `5uNG9O58gUE7snukf3bvZ0rxhtnjzSGzG`
 
-
+```
+:set shell=/bin/bash
+```
 
 
 ## Level 26→ Level 27
+
+```
+
+```
+
+
+
 
 
 
