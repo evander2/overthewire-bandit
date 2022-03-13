@@ -100,11 +100,88 @@ strings data.txt | grep '='
 
 ## Level 10→ Level 11
 
+```
+base64 -d data.txt
+```
+`IFukwKGsFW8MOq3IRFqrxE1hxTNEbUPR`
+
 
 ## Level 11→ Level 12
 
+```
+cat data.txt | tr "A-Za-z" "N-ZA-Mn-za-m"
+```
+`5Te8Y4drgCRfCx8ugdwuEX8KFC6k2EUu`
+
 
 ## Level 12→ Level 13
+
+```
+mkdir /tmp/evan
+cp data.txt /tmp/evan
+cd tmp/evan
+xxd -r data.txt > bata.txt
+file bata.txt
+```
+bata.txt: gzip compressed data, was "data2.bin", last modified: Thu May  7 18:14:30 2020, max compression, from Unix
+
+```
+mv bata.txt data2.bin.gz
+gzip -d data2.bin.gz
+file data2.bin
+```
+data2.bin: bzip2 compressed data, block size = 900k
+
+```
+mv data2.bin data2.bz2
+bzip2 -d data2.bz2
+file data2
+```
+data2: gzip compressed data, was "data4.bin", last modified: Thu May  7 18:14:30 2020, max compression, from Unix
+
+```
+mv data2 data4.bin.gz
+gzip -d data4.bin.gz
+file data4.bin
+```
+data4.bin: POSIX tar archive (GNU)
+
+```
+mv data4.bin data4.bin.tar
+tar -xvf data4.bin.tar
+file data5.bin
+```
+data5.bin: POSIX tar archive (GNU)
+
+```
+mv data5.bin data6.bin.tar
+tar -xvf data6.bin.tar
+file data6.bin
+```
+data6.bin: bzip2 compressed data, block size = 900k
+
+```
+mv data6.bin data7.bz2
+bzip2 -d data7.bz2
+file data7
+``` 
+data7: POSIX tar archive (GNU)
+
+```
+mv data7 data8.tar.gz
+tar -xvf data8.tar.gz
+file data8.bin
+```
+data8.bin: gzip compressed data, was "data9.bin", last modified: Thu May  7 18:14:30 2020, max compression, from Unix
+
+```
+mv data8.bin data9.bin.gz
+gzip -d data9.bin.gz
+file data9.bin
+```
+data9.bin: ASCII text
+
+`8ZjyCRiBWFYkneahHwxCv3wb2a1ORpYL`
 
 
 ## Level 13→ Level 14
