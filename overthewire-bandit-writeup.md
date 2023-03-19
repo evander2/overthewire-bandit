@@ -37,17 +37,31 @@ cd inhere
 ls -al
 cat .hidden
 ```
-`pIwrPrtPN36QITSp3EQaw936yaFoFgAB`
+`2EW7BBsr6aMMoJ2HjW067dm8EgX26xNe`
 
 ## Level 4→ Level 5
 
 ```
 cd inhere
 ls -al
-head ./*
+file ./*
 ```
+```
+./-file00: data
+./-file01: data
+./-file02: data
+./-file03: data
+./-file04: data
+./-file05: Non-ISO extended-ASCII text, with NEL line terminators
+./-file06: Non-ISO extended-ASCII text, with no line terminators, with escape sequences
+./-file07: ASCII text
+./-file08: data
+./-file09: data
 ./-file07 :
-
+```
+```
+cat ./-file07
+```
 `koReBOKuIDDepwhWk7jZC0RTdopnAYKh`
 
 ## Level 5→ Level 6
@@ -57,20 +71,20 @@ cd inhere
 find -size 1033c
 cat ./maybehere07/.file2
 ```
-`DXjZPULLxYr17uwoI01bNLQbtFemEgo7`
+`P4L4vucdmLnm8I7Vl7jG1ApGSfjYKqJU`
 
 
 ## Level 6→ Level 7
 
 ```
-find / -user bandit7 -group bandit6 -size 33c
+find / -size 33c -user bandit7 -group bandit6 2>/dev/null
 ```
 /var/lib/dpkg/info/bandit7.password
 
 ```
 cat /var/lib/dpkg/info/bandit7.password
 ```
-`HKBPTKQnIay4Fw76bEy8PVxKEDQRKTzs`
+`z7WtoNQU2XfjmMtWA8u5rN4vzqu4v99S`
 
 
 ## Level 7→ Level 8
@@ -78,7 +92,7 @@ cat /var/lib/dpkg/info/bandit7.password
 ```
 cat data.txt | grep millionth
 ```
-`cvX2JJa4CFALtqS87jk27qwqGhBM9plV`
+`TESKZC0XvTetK0S9xNwm25STk5iWrBvP`
 
 
 ## Level 8→ Level 9
@@ -86,7 +100,7 @@ cat data.txt | grep millionth
 ```
 cat data.txt | sort | uniq -u
 ```
-`UsvVyFSfZZWbi6wgC7dAFyFuR6jQQUhR`
+`EN632PlfYiZbn3PhVK3XOGSlNInNE00t`
 
 
 ## Level 9→ Level 10
@@ -94,7 +108,7 @@ cat data.txt | sort | uniq -u
 ```
 strings data.txt | grep '='
 ```
-`truKLdjsbJ5g7yyJ2X2R0o3a5HQJFuLk`
+`G7w8LIi6J3kTb8A7j9LgrywtEUlyyp6s`
 
 
 
@@ -103,7 +117,7 @@ strings data.txt | grep '='
 ```
 base64 -d data.txt
 ```
-`IFukwKGsFW8MOq3IRFqrxE1hxTNEbUPR`
+`6zPeziLdR2RKNdNYFNb6nVCKzphlXHBM`
 
 
 ## Level 11→ Level 12
@@ -111,7 +125,7 @@ base64 -d data.txt
 ```
 cat data.txt | tr "A-Za-z" "N-ZA-Mn-za-m"
 ```
-`5Te8Y4drgCRfCx8ugdwuEX8KFC6k2EUu`
+`JVNBBFSmZwKKOP0XbFXOoW8chDz5yVRv`
 
 
 ## Level 12→ Level 13
@@ -123,7 +137,7 @@ cd tmp/evan
 xxd -r data.txt > bata.txt
 file bata.txt
 ```
-bata.txt: gzip compressed data, was "data2.bin", last modified: Thu May  7 18:14:30 2020, max compression, from Unix
+bata.txt: gzip compressed data, was "data2.bin", last modified: Tue Feb 21 22:02:52 2023, max compression, from Unix, original size modulo 2^32 564
 
 ```
 mv bata.txt data2.bin.gz
@@ -137,7 +151,7 @@ mv data2.bin data2.bz2
 bzip2 -d data2.bz2
 file data2
 ```
-data2: gzip compressed data, was "data4.bin", last modified: Thu May  7 18:14:30 2020, max compression, from Unix
+data2: gzip compressed data, was "data4.bin", last modified: Tue Feb 21 22:02:52 2023, max compression, from Unix, original size modulo 2^32 20480
 
 ```
 mv data2 data4.bin.gz
@@ -172,7 +186,7 @@ mv data7 data8.tar.gz
 tar -xvf data8.tar.gz
 file data8.bin
 ```
-data8.bin: gzip compressed data, was "data9.bin", last modified: Thu May  7 18:14:30 2020, max compression, from Unix
+data8.bin: gzip compressed data, was "data9.bin", last modified: Tue Feb 21 22:02:52 2023, max compression, from Unix, original size modulo 2^32 49
 
 ```
 mv data8.bin data9.bin.gz
@@ -181,33 +195,38 @@ file data9.bin
 ```
 data9.bin: ASCII text
 
-`8ZjyCRiBWFYkneahHwxCv3wb2a1ORpYL`
+```
+cat data9.bin
+```
+`wbWdlBxEir4CaE8LaPhauuOo6pwRmrDw`
 
 
 ## Level 13→ Level 14
 
 ```
-ssh -i sshkey.private bandit14@localhost
+ssh -i sshkey.private bandit14@localhost -p 2220
 cat /etc/bandit_pass/bandit14
 ```
-`4wcYUJFw0k0XLShlDzztnTBHiqxU3b3e`
+`fGrHPx402xGC7U7rXKDaxiWFTOiF0ENq`
 
 
 ## Level 14→ Level 15
 
 ```
-echo "4wcYUJFw0k0XLShlDzztnTBHiqxU3b3e" | nc localhost 30000
+echo "fGrHPx402xGC7U7rXKDaxiWFTOiF0ENq" | nc localhost 30000
 ```
-`BfMYroe26WYalil77FoDi9qh59eK5xNr`
+`jN2kgmIXJ6fShzhT2avhotn4Zcka6tnt`
 
 
 ## Level 15→ Level 16
 
 ```
 openssl s_client -connect localhost:30001
-BfMYroe26WYalil77FoDi9qh59eK5xNr
 ```
-`cluFn7wTiGryunymYOu4RcffSxQluehd`
+```
+jN2kgmIXJ6fShzhT2avhotn4Zcka6tnt
+```
+`JQttfApK4SeyHwDlI9SXGR50qclOAil1`
 
 
 ## Level 16→ Level 17
@@ -215,17 +234,16 @@ BfMYroe26WYalil77FoDi9qh59eK5xNr
 ```
 nmap -p 31000-32000 localhost
 ```
-Not shown: 996 closed ports  
-PORT      STATE SERVICE  
-31046/tcp open  unknown  
-31518/tcp open  unknown  
-31691/tcp open  unknown  
-31790/tcp open  unknown  
-31960/tcp open  unknown  
+PORT      STATE SERVICE
+31046/tcp open  unknown
+31518/tcp open  unknown
+31691/tcp open  unknown
+31790/tcp open  unknown
+31960/tcp open  unknown
 
 ```
 openssl s_client -connect localhost:31790
-cluFn7wTiGryunymYOu4RcffSxQluehd
+JQttfApK4SeyHwDlI9SXGR50qclOAil1
 ```
 
 ```
@@ -263,17 +281,17 @@ mkdir /tmp/evan2
 cd /tmp/evan2
 touch sshkey.private
 ```
-RSA Private key
+Make RSA Private key file
 
 ```
 chmod 600 sshkey.private
-ssh -i ./sshkey.private bandit17@localhost
+ssh -i ./sshkey.private bandit17@localhost -p 2220
 ```
 ```
 cat /etc/bandit_pass/bandit17
 ```
 
-`xLYVMN9WE5zQ5vHacb0sZEVqbrp7nBTn`
+`VwOSWtCA7lRKkTfbr2IDh6awj9RNZM5e`
 
 
 ## Level 17→ Level 18
@@ -282,7 +300,7 @@ cat /etc/bandit_pass/bandit17
 diff passwords.new passwords.old
 ```
 
-`kfBf3eYk5BPBRzwjqutbbfE887SVc5Yd`
+`hga5tuuCLF6fFzUpnagiMN8ssu9LFrdg`
 
 
 ## Level 18→ Level 19
@@ -290,7 +308,7 @@ diff passwords.new passwords.old
 ```
 ssh -p 2220 bandit18@bandit.labs.overthewire.org cat readme
 ```
-`IueksS7Ubh8G3DCwVzrTd8rAVOwq3M5x`
+`awhqfNnAbc1naukrpqDYcF95h7HoMTrC`
 
 
 ## Level 19→ Level 20
@@ -300,7 +318,7 @@ set-uid program
 ```
 ./bandit20-do cat /etc/bandit_pass/bandit20
 ```
-`GbKksEFF4yrVs6il55v6gwY5aVje5f0j`
+`VxCazJaVykI6W36BkBU0mJTCM8rR95XT`
 
 
 ## Level 20→ Level 21
@@ -308,10 +326,13 @@ set-uid program
 open a port 7777
 
 ```
-echo "GbKksEFF4yrVs6il55v6gwY5aVje5f0j" | nc -l -p 7777 localhost &
+echo "VxCazJaVykI6W36BkBU0mJTCM8rR95XT" | nc -l -p 7777 &
 ./suconnect 7777
 ```
-`gE269g2h3mw3pwgrj0Ha9Uoqen1c9DGr`
+
+Password matches, sending next password
+
+`NvEJF7oVjkddltPSrdKEFOllh9V1IBcq`
 
 
 
@@ -330,7 +351,7 @@ cat /etc/bandit_pass/bandit22 > /tmp/t7O6lds9S0RqQh9aMcz6ShpAoZKF7fgv
 ```
 cat /tmp/t7O6lds9S0RqQh9aMcz6ShpAoZKF7fgv
 ```
-`Yk7owGAcWjwMVRwrTesJEwB7WVOiILLI`
+`WdDozAdTM2z9DiFEQ2mGlwngMfj4EZff`
 
 
 
@@ -361,7 +382,7 @@ echo I am user bandit23 | md5sum | cut -d ' ' -f 1
 ```
 cat /tmp/8ca319486bfbbc3663ea0fbe81326349
 ```
-`jc1udXuA1tiHqjIsL8yaapX5XIAI6i0n`
+`QYw0Y2aiA672PsMmh9puTQuhoz8SyR2G`
 
 
 
@@ -377,8 +398,8 @@ cat /usr/bin/cronjob_bandit24.sh
 
 myname=$(whoami)
 
-cd /var/spool/$myname
-echo "Executing and deleting all scripts in /var/spool/$myname:"
+cd /var/spool/$myname/foo
+echo "Executing and deleting all scripts in /var/spool/$myname/foo:"
 for i in * .*;
 do
     if [ "$i" != "." -a "$i" != ".." ];
@@ -395,39 +416,43 @@ done
 
 Write shell script
 ```
-mkdir /tmp/shell
-cd /tmp/shell
-vi shell.sh
+mktemp -d
+/tmp/tmp.kMfwHm3my7
+vi bandit24_pass.sh
 ```
 ```
-#! /bin/bash
-cat /etc/bandit_pass/bandit24 > /tmp/shell/test.txt
+#!/bin/bash
+cat /etc/bandit_pass/bandit24 > /tmp/tmp.kMfwHm3my7/password
 exit 0     
 ```
 ```
-chmod 777 /tmp/shell/shell.sh
-chmod o+w /tmp/shell
-```
-```
-cd /var/spool/bandit24
-cp /tmp/shell/shell.sh .
+chmod 777 bandit24_pass.sh 
+chmod 777 /tmp/tmp.kMfwHm3my7
+touch password
+chmod 777 password 
+cp bandit24_pass.sh /var/spool/bandit24/foo/
 ```
 Wait for 1 minute
 
 ```
-cat /tmp/shell/test.txt
+cat password 
 ```
-`UoMYTrfrBFHyQXmg6gzctqAwOmw1IohZ`
+`VAfGXJ1PBSsPSnvsjI8p759leLZ9GGar`
 
 
 ## Level 24→ Level 25
 
 Brute force
-
+```
+mktemp -d 
+/tmp/tmp.hAq26uTWnY
+cd /tmp/tmp.hAq26uTWnY
+vi brute.sh
+```
 ```
 #!/bin/bash
 
-bandit24=UoMYTrfrBFHyQXmg6gzctqAwOmw1IohZ                     
+bandit24=VAfGXJ1PBSsPSnvsjI8p759leLZ9GGar                   
 
 for i in {0..9999}
     do
