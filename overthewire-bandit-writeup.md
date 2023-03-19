@@ -12,7 +12,7 @@
 ls -al
 cat readme
 ```
-`boJ9jbbUNNfktd78OOpsqOltutMc3MY1`
+`NH2SXQwcBdpmTEzi3bvBHMM9H66vVXjL`
 
 ## Level 1 → Level 2
 
@@ -20,15 +20,15 @@ cat readme
 ls -al
 cat ./-
 ```
-`CV1DtqXWVFXTvM2F0k09SHz0YwRINYA9`
+`rRGizSaX8Mk1RTb1CNQoXTcYZWU6lgzi`
 
 ## Level 2→ Level 3
 
 ```
 ls -al
-cat spaces\ in\ this\ filename
+cat "spaces in this filename"
 ```
-`UmHadQclWmgdLOKQ3YNgjWxGoRMb5luK`
+`aBZ0W5EmUfAf7kHTQeOwd8bauFJ2lAiG`
 
 ## Level 3→ Level 4
 
